@@ -16,9 +16,9 @@
 <p><%= registerUser.getName() %>さんに質問です</p>
 <p>想像力が豊かな方だ</p>
 
-<form action="ShindanServlet" method="post">
-	<button type="submit" name="action" value="q4y">はい</button>
-	<button type="submit" name="action" value="q4n">いいえ</button>
+<form action="ShindanResultServlet" method="post">
+	<button type="submit" name="resultId" value="1">はい</button>
+	<button type="submit" name="resultId" value="2">いいえ</button>
 </form>
 </div>
 

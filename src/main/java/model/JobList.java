@@ -1,6 +1,6 @@
 package model;
 import java.io.Serializable;
-
+//JOBLISTテーブルのクラス
 public class JobList implements Serializable{
 	private String jobId; // JOB Id
 	private String jobName; // JOB NAME
@@ -34,5 +34,7 @@ public class JobList implements Serializable{
 	public String getJob1() { return job1; }
 	public String getJob2() { return job2; }
 	public String getJob3() { return job3; }
+	
+
 
 }
