@@ -16,10 +16,11 @@
 <p><%= registerUser.getName() %>さんに質問です</p>
 <p>日々の変化を楽しむタイプだ</p>
 
-<form action="ShindanServlet" method="post">
-	<button type="submit" name="action" value="q6y">はい</button>
-	<button type="submit" name="action" value="q6n">いいえ</button>
+<form action="ShindanResultServlet" method="post">
+	<button type="submit" name="resultId" value="5">はい</button>
+	<button type="submit" name="resultId" value="4">いいえ</button>
 </form>
+
 </div>
 
 </body>

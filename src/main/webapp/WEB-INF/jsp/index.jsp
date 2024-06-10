@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>適性ジョブ診断</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 
