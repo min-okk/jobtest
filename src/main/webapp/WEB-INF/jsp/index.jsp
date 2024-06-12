@@ -11,18 +11,29 @@
 </head>
 <body>
 
-    <div>
+    <article>
         <h1>適性ジョブ診断</h1>
-        <p>あなたにぴったりのお仕事を・・・・・テキスト</p>
-    </div>
+        <div><img src="${pageContext.request.contextPath}/img/main_img.png"></div>
+        
+        <section class="description">
+        <p>就職を希望しているけれど</p>
+        <p>「どんな仕事が向いているかわからない」<p>
+        <p>「自分にできる仕事がわからない」</p>
+        <p>簡単な設問に答えるだけで</p>
+        <p>あなたにぴったりのお仕事を診断します</p>
+        </section>
+    
 
-    <div>
+    <section class="form">
         <form action="RegisterUser" method="post">
             <p>お名前を入力してください</p>
             名前：<input type="text" name="name" value="">
             <button type="submit" onclick="loction.href='RegisterUser?action=done'">START</button>
         </form>
-    </div>
+    </section> 
+    
+    </article>
+
     
 </body>
 </html>
