@@ -22,6 +22,15 @@ public class ShindanResultServlet extends HttpServlet {
     private static final String DB_URL = "jdbc:h2:tcp://localhost/~/jobtest"; // H2データベースのURLを修正
     private static final String DB_USER = "sa";
     private static final String DB_PASS = "";
+    
+ // JDBCドライバの読み込み
+    static {
+        try {
+            Class.forName("org.h2.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

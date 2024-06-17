@@ -3,65 +3,50 @@
 <% User registerUser = (User)session.getAttribute("registerUser"); %>
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8">
-	<title>適性ジョブ診断</title>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
-	<noscript>
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/noscript.css" />
-	</noscript>
+<meta charset="UTF-8">
+<title>適性ジョブ診断</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
 </head>
-
 <body>
 <!-- Wrapper -->
-	<div id="wrapper">
-	
-	<!-- Header -->
-		<header id="header" class="alt">
-			<img src="${pageContext.request.contextPath}/img/main_img.png" alt="" />
-			<h1>適性ジョブ診断</h1>
-		</header>
-		
-	
-    <!-- Main -->
-		<div id="main">
-		
-		<!-- Get Started -->
-			<section id="cta" class="main special">
-				<header class="major">
-					<h2>Congue imperdiet</h2>
-					<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-						posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-				</header>
-				<footer class="major">
-					<ul class="actions special">
-						<li><a href="generic.html" class="button primary">Get Started</a></li>
-						<li><a href="generic.html" class="button">Learn More</a></li>
-					</ul>
-				</footer>
-			</section>
+<div id="wrapper">
+    <!-- container classレイアウト用 -->
+    <div class="container">
+        <!-- メイン画像 -->
+        <h1>適職診断</h1>
+        <div class="main_img">
+            <img src="${pageContext.request.contextPath}/img/main_img.png" alt="適職診断">
+        </div>
 
-		</div>
- 
-        
-        
-        <p>就職を希望しているけれど</p>
-        <p>「どんな仕事が向いているかわからない」<p>
-        <p>「自分にできる仕事がわからない」</p>
-        <p>簡単な設問に答えるだけで</p>
-        <p>あなたにぴったりのお仕事を診断します</p>
-        
-    
+        <!-- main classレイアウト用 -->
+        <main class="main">
+            <!-- 説明/article要素 -->
+            <h2>はじめに</h2>
+            <section class="description">
+                <p>就職を希望しているけれど</p>
+                <p>「どんな仕事が向いているかわからない」</p>
+                <p>「自分にできる仕事がわからない」</p>
+                <p>そんなお悩みをもっていませんか？</p>
+                <p>この診断では、簡単な設問に答えるだけで</p>
+                <p>あなたにぴったりのお仕事を提案します！</p>
+            </section>
 
-   
-        <form action="RegisterUser" method="post">
-            <p>お名前を入力してください</p>
-            名前：<input type="text" name="name" value="">
-            <button type="submit" onclick="loction.href='RegisterUser?action=done'">START</button>
-        </form>
-
-	</div>
-    
-	</body>
+            <hr>
+            <!-- section要素 -->
+            <section class="form">
+                <h3>ニックネームを入力してください</h3>
+                <form action="RegisterUser" method="post">
+                    <input type="text" name="name" value="" placeholder="結果表時に使います">
+                    <button type="submit" class="button buttonA" onclick="location.href='RegisterUser?action=done'">診断スタート</button>
+                </form>
+            </section>
+        </main><!-- 【必須】main終了 -->
+    </div><!-- 【必須】container終了 -->
+    <!-- fotter要素 -->
+    <footer>
+        <p>© 2024サイトの著作権情報</p>
+    </footer>
+</div>
+</body>
 </html>
