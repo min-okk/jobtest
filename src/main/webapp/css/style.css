@@ -1,3 +1,6 @@
+@import url(fontawesome-all.min.css);
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -22,7 +25,12 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	background-color: #ec9023;
-	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN","Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
 
 ol, ul {
@@ -65,7 +73,7 @@ hr {
 /*ウィンドウ幅が767px以上の場合に適用*/
 @media screen and (min-width:767px){
 	.container {
-		width: 90%;
+		width: 100%;
 		max-width :800px;
 		margin: 0 auto;
 		}
@@ -75,7 +83,7 @@ hr {
 	@media screen and (max-width:767px){
 		.container {
 			width: 100%;
-			max-width :700px;
+			max-width :767px;
 			margin: auto;
 			}
 		}
@@ -84,7 +92,7 @@ hr {
 	@media screen and (max-width:479px){
 		.container {
 			width: 100%;
-			max-width:450px;
+			max-width:479px;
 			margin: auto;
 			}
 		}
@@ -92,6 +100,7 @@ hr {
 .main {
 		width: 100%;
 		max-width :800px;
+		height: auto;
 		margin: 0 auto;
 		padding: 4em 2em;
 		background-color: #fff;
@@ -110,6 +119,7 @@ hr {
 .main {
 	width: 90%;
 	max-width :800px;
+	height: auto;
 	margin: 1em auto;
 	padding: 2em 2em;
 	background-color: #fff;
@@ -121,6 +131,7 @@ hr {
 	.main {
 		width: 100%;
 		max-width :700px;
+		height: auto;
 		margin: 1em auto;
 		padding: 1em 1em;
 		background-color: #fff;
@@ -128,15 +139,17 @@ hr {
 	}
 
 /*ウィンドウ幅が最大479pxまでの場合に適用*/
-@media screen and (max-width:479px){
+@media screen and (min-width:479px){
 	.main {
 		width: 100%;
-		max-width:450px;
-		margin: auto;
+		max-width:470px;
+		height: auto;
+		margin: 2em auto;
 		padding: 1em auto;
 		background-color: #fff;
 		}
 	}
+	
 
 .main p {
 	font-size: 1em;
@@ -186,18 +199,20 @@ button {
 	background-color: #ec9023;
 	font-size: 20px;
 	border: none;
+	margin: 1em auto;
 }
 /*buttonA*/
 .buttonA {
 	border:3px solid #ec7323;
 	background-color: #ec7323;
+
 	color: #fff;
-  }
-  .buttonA:hover {
+}
+.buttonA:hover {
 	border:3px solid #ec9023;
 	background-color: #ec9023;
 	color:  #fff;
-  }
+}
 
 footer{
 	width: 100%;
@@ -212,7 +227,12 @@ h1{
 }
 
 .username {
-	font-size: 1.8em;
+	font-size: 1.2em;
+}
+
+.jobname{
+	font-size: 1.4em;
+	font-weight: 700;
 }
 
 .question {
@@ -232,13 +252,13 @@ h1{
 
 .select button {
 	width: 48%;
-	margin:auto 6px;
+	margin:auto 3px;
 }
 
 .button-back {
 	width: 100%;
-	margin:2em auto;
-	background-color: #bbb;
+	margin:1em auto;
+	background-color: #aaa;
 	color: #FFF;
 }
 
@@ -246,5 +266,147 @@ h1{
 	border:1px solid #ccc;
 	background-color: #ccc;
 	color:  #fff;
+}
+
+.result_area{
+	width: 100%;
+	text-align: center;
+}
+
+.result_area img {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin: 1em auto;
+}
+
+.jobcomment{
+	width: 100%;
+	max-width: 400px;
+	text-align: left;
+	margin: 1em auto;
+}
+
+.jobcomment p{
+	font-size: 1.2em;
+	text-align: left;
+}
+
+.humantype,.jobtype {
+	width: 100%;
+	max-width: 400px;
+	text-align: left;
+	margin: 2em auto;
+}
+
+
+.humantype h2,.jobtype h2 {
+	font-size: 1em;
+	color: #333;
+	font-weight: 700;
+	text-align: left;
+}
+
+.humantype ul {
+	border: solid 2px #ffb03f;
+	padding: 0 0.5em;
+	position: relative;
+}
+
+.humantype ul li {
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 2em; /* 左側の余白を調整 */
+    border-bottom: dashed 1px silver;
+    list-style-type: none !important;
+}
+
+.humantype ul li:before {
+	font-family: "Font Awesome 6 Free";
+	content: "\f138";/*アイコン種類*/
+	font: var(--fa-font-solid);
+	position: absolute;
+	left : 0.5em; /*左端からのアイコンまで*/
+	color: #ffb03f; /*アイコン色*/
+}
+
+.humantype ul li:last-of-type {
+	border-bottom: none;
+}
+
+.jobtype li {
+	position: relative;
+	list-style-type: none!important;/*ポチ消す*/
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin-bottom: 5px;
+	line-height: 1.5;
+	background: #fdcc62;
+	vertical-align: middle;
+	color: #333;
+	border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+	
+}
+
+.jobtype ul li:before{ 
+	display:inline-block; 
+	vertical-align: middle;
+	/*以下白丸つくる*/
+	content:'';
+	width:1em;
+	height: 1em;
+	background: #fff;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+.jobridge {
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+	margin: 4em auto;
+}
+
+.jobridge img {
+	width: 50%;
+	height: auto;
+	margin:1em auto;
+}
+
+.jobridge h2,.contact h2 {
+	font-size: 1.4em;
+	font-weight: 700;
+	color: #ec7323;
+}
+
+.jobridge p {
+	text-align: left;
+	margin: 1em auto;
+}
+
+#strong {
+	font-weight: 700;
+	color:#ec7323;
+}
+
+.contact {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin: auto;
+}
+@media (max-width: 767px) {
+	.jobname {
+	  font-size: 1.3rem;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.jobname {
+	  font-size: 1rem;
+	}
   }
 
+@media (max-width: 767px) {
+	.form input,
+	.form textarea {
+	  width: 100%;
+	  max-width: none;
+	}
