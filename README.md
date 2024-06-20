@@ -1,16 +1,6 @@
-# jobtest
+# 適職診断/jobtest
 
 <div id="top"></div>
-
-## 使用技術一覧
-
-<!-- シールド一覧 -->
-<!-- 該当するプロジェクトの中から任意のものを選ぶ-->
-<p style="display: inline">
-  <!-- バックエンドの言語一覧 -->
-  <img src="https://img.shields.io/badge/-java-F2C63C.svg?logo=java&style=for-the-badge">
-</p>
-
 ## 目次
 
 1. [プロジェクトについて](#プロジェクトについて)
@@ -21,23 +11,38 @@
 <!-- プロジェクトについて -->
 
 ## プロジェクトについて
-
-ジョブリッジ企業実習において
+SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授業の一環として
+ジョブリッジ企業実習を実施。
 求職者が自分の適性を活かした職業を知ることができる
 適職診断のWEBアプリを作成しました。
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 環境
+<!-- シールド一覧 -->
+<!-- 該当するプロジェクトの中から任意のものを選ぶ-->
+<p style="display: inline">
+  <!-- バックエンドの言語一覧 -->
+  <img src="https://img.shields.io/badge/-java-F2C63C.svg?logo=java&style=for-the-badge">
+</p>
 <!-- 言語、フレームワーク、ミドルウェア、インフラの一覧とバージョンを記載 -->
-| 言語・フレームワーク  | バージョン |
-| --------------------- | ---------- |
-| Java                  | 3.11.4     |
-| D2SQL                  | 8.0       |
+- バックエンド
+    - java
+    - H2 Database
+- フロントエンド
+    - HTML
+    - CSS
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## デモ画面
-■ フロント画面
+![TOP](shindan_top_ss.jpg)
+トップ画面 診断結果や表示に使用するニックネームを入力  
+
+![TEST](shindan_top_q.jpg)
+はいorいいえの二択問題を表示。回答によって次の質問が変わる  
+
+![RESULT](shindan_top_result.jpg)
+回答から適職を導きだし表示。資質や具体的な職種を提案。 
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
