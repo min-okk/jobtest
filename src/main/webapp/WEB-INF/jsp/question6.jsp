@@ -24,6 +24,7 @@
 
 <section class="question">
 <h3>日々の変化を楽しむタイプだ</h3>
+<img src="${pageContext.request.contextPath}/img/q6.png" alt="変化を楽しむ">
 </section>
 
 <section class="select">
@@ -34,7 +35,7 @@
 </section>
 
 <!-- ブラウザバック -->
-<button type="submit" name="action" value="" class="button-back">前のページに戻る</button>
+<button type="submit" name="action" value="" class="button-back" onclick="window.history.back();">前のページに戻る</button>
 
 </main>
 </div>

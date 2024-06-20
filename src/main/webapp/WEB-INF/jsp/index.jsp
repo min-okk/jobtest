@@ -34,18 +34,19 @@
 
             <hr>
             <!-- section要素 -->
-            <section class="form">
+            <section class="startform">
                 <h3>ニックネームを入力してください</h3>
                 <form action="RegisterUser" method="post">
                     <input type="text" name="name" value="" placeholder="結果表時に使います">
                     <button type="submit" class="button buttonA" onclick="location.href='RegisterUser?action=done'">診断スタート</button>
                 </form>
             </section>
+            
         </main><!-- 【必須】main終了 -->
     </div><!-- 【必須】container終了 -->
     <!-- fotter要素 -->
     <footer>
-        <p>© 2024サイトの著作権情報</p>
+        <p>(c) 2024 ジョブリッジ｜<a href="">Policy</a></p>
     </footer>
 </div>
 </body>

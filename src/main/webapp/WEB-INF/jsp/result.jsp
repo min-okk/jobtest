@@ -34,7 +34,7 @@ if (jobLists != null && !jobLists.isEmpty()) {
             <p><span class="jobname"><%= jobList.getJobName() %></span>です。</p>
           
           <!--画像エリア-->
-            <img src="#" alt="ぴったりのお仕事">
+            <img src="${pageContext.request.contextPath}/img/<%= jobList.getJobImg() %>" alt="ぴったりのお仕事">
             
             <!-- コメント -->
             <p class="jobcomment"><%= jobList.getComment() %></p>
@@ -71,19 +71,21 @@ if (jobLists != null && !jobLists.isEmpty()) {
 <hr>
         <section class="contact">
             <!-- お問い合わせ -->
-                <h2>就労支援について</h2>
-                <p>「もっと詳しく知りたい！」という方は</p>
-                <p>お気軽にお問合せください。</p>
+            <h2>就労支援について</h2>
+            <p>「もっと詳しく知りたい！」という方は</p>
+            <p>お気軽にお問合せください。</p>
+            <button class="button buttonA" onclick="location.href='https://www.jobridge.info/contact'">お問い合わせ</button>
 
-                <button class="button buttonA">お問い合わせ</button>
-                <button class="button-back">最初に戻る</button>
+			<form action="${pageContext.request.contextPath}/WelcomeServlet" method="post">
+				<button class="button-back" type="submit" name="action" value="pageback">診断トップに戻る</button>
+			</form>
             </section>
             </main>
     <!-- 【必須】main終了 -->
 
     <!-- fotter要素 -->
     <footer>
-        <p>(c) 2024 ジョブリッジ｜<a href="#">Policy</a></p>
+        <p>(c) 2024 ジョブリッジ｜<a href="">Policy</a></p>
     </footer>
 </div><!-- 【必須】wrapper終了 -->
 

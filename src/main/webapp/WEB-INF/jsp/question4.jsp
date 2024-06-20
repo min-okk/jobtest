@@ -24,6 +24,7 @@
 
 <section class="question">
 <h3>想像力が豊かな方だ</h3>
+<img src="${pageContext.request.contextPath}/img/q4.png" alt="想像力">
 </section>
 
 <section class="select">
@@ -34,7 +35,7 @@
 </section>
 
 <!-- ブラウザバック -->
-<button type="submit" name="action" value="" class="button-back">前のページに戻る</button>
+<button type="submit" name="action" value="" class="button-back" onclick="window.history.back();">前のページに戻る</button>
 
 </main>
 </div>

@@ -22,6 +22,7 @@
 
 <section class="question">
 <h3>PCでの作業やデジタル機器に興味がある</h3>
+<img src="${pageContext.request.contextPath}/img/q3.png" alt="デジタル機器">
 </section>
 
 <section class="select">
@@ -31,7 +32,7 @@
 </form>
 </section>
 <!-- ブラウザバック -->
-<button type="submit" name="action" value="" class="button-back">前のページに戻る</button>
+<button type="submit" name="action" value="" class="button-back" onclick="window.history.back();">前のページに戻る</button>
 
 </main>
 </div>

@@ -60,7 +60,7 @@ hr {
 
 .container {
 	width: 100%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin : 0 auto;
 }
 
@@ -74,7 +74,7 @@ hr {
 @media screen and (min-width:767px){
 	.container {
 		width: 100%;
-		max-width :800px;
+		max-width :1000px;
 		margin: 0 auto;
 		}
 	}
@@ -117,7 +117,7 @@ hr {
 /*ウィンドウ幅が767px以上の場合に適用*/
 @media screen and (min-width:767px){
 .main {
-	width: 90%;
+	width: 100%;
 	max-width :800px;
 	height: auto;
 	margin: 1em auto;
@@ -164,23 +164,22 @@ hr {
 	color: #666;
 }
 
-.form h3{
+.startform h3{
 	font-size: 0.9em;
 	text-align: center;
 }
 
-.form {
-	width: 50%;
-	min-width: 9rem;
+.startform {
+	width: 100%;
 	margin:auto;
 	text-align: center;
 }
 
-.form input, textarea {
+.startform input {
 	width: 100%;
-	max-width: 100%;
+	max-width: 420px;
 	border: none;
-	margin: 0.5rem 0;
+	margin: 1em auto 0 auto;
 	padding: 1.5em 1rem;
 	border-radius: 0.3rem;
 	background-color: #ec912370;
@@ -200,14 +199,16 @@ button {
 	font-size: 20px;
 	border: none;
 	margin: 1em auto;
+	cursor: pointer;
 }
+
 /*buttonA*/
 .buttonA {
 	border:3px solid #ec7323;
 	background-color: #ec7323;
-
 	color: #fff;
 }
+
 .buttonA:hover {
 	border:3px solid #ec9023;
 	background-color: #ec9023;
@@ -239,6 +240,12 @@ h1{
 	width: 100%;
 	margin: 2em auto;
 	text-align: center;
+}
+
+.question img {
+	width: 50%;
+	height: auto;
+	margin: 1em;
 }
 
 .question h3 {
@@ -274,8 +281,8 @@ h1{
 }
 
 .result_area img {
-	width: 100%;
-	max-width: 400px;
+	width: 60%;
+	max-width: 380px;
 	height: auto;
 	margin: 1em auto;
 }
@@ -396,13 +403,13 @@ h1{
 	.jobname {
 	  font-size: 1.3rem;
 	}
-  }
+ }
   
   @media (max-width: 480px) {
 	.jobname {
 	  font-size: 1rem;
 	}
-  }
+ }
 
 @media (max-width: 767px) {
 	.form input,
@@ -410,3 +417,4 @@ h1{
 	  width: 100%;
 	  max-width: none;
 	}
+}

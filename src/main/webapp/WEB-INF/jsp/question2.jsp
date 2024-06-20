@@ -22,6 +22,7 @@
 <p><span class="username"><%= registerUser.getName() %></span>さんに質問です</p>
 <section class="question">
 <h3>ものづくりが好きだ</h3>
+<img src="${pageContext.request.contextPath}/img/q2.png" alt="ものづくり">
 </section>
 
 <section class="select">
@@ -32,7 +33,7 @@
 </section>
 
 <!-- ブラウザバック -->
-<button type="submit" name="action" value="" class="button-back">前のページに戻る</button>
+<button type="submit" name="action" value="" class="button-back" onclick="window.history.back();">前のページに戻る</button>
 
 </main>
 </div>

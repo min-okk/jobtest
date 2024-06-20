@@ -54,7 +54,8 @@ public class ShindanResultServlet extends HttpServlet {
                 String job1 = rs.getString("JOB1");
                 String job2 = rs.getString("JOB2");
                 String job3 = rs.getString("JOB3");
-                JobList jobList = new JobList(jobId, jobName, comment, type1, type2, type3, job1, job2, job3);
+                String jobImg = rs.getString("JOBIMG");
+                JobList jobList = new JobList(jobId, jobName, comment, type1, type2, type3, job1, job2, job3, jobImg);
                 jobLists.add(jobList);
             }
 

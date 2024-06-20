@@ -11,10 +11,11 @@ public class JobList implements Serializable{
 	private String job1; // タイプ1
 	private String job2; // タイプ2
 	private String job3; // タイプ3
+	private String jobImg; // JOB IMG
 	
 	public JobList() {}
 	public JobList(String jobId, String jobName,String comment,
-			String type1,String type2,String type3,String job1,String job2,String job3) {
+			String type1,String type2,String type3,String job1,String job2,String job3,String jobImg) {
 		this.jobName = jobName;
 		this.comment = comment;
 		this.type1 = type1;
@@ -23,6 +24,7 @@ public class JobList implements Serializable{
 		this.job1 = job1;
 		this.job2 = job2;
 		this.job3 = job3;
+		this.jobImg = jobImg;
 	}
 	
 	public String getJobId() { return jobId; }
@@ -34,6 +36,7 @@ public class JobList implements Serializable{
 	public String getJob1() { return job1; }
 	public String getJob2() { return job2; }
 	public String getJob3() { return job3; }
+	public String getJobImg() { return jobImg; }
 	
 
 

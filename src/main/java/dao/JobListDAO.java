@@ -23,7 +23,7 @@ public class JobListDAO {
         List<JobList> jobLists = new ArrayList<>();
 
         try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
-            String sql = "SELECT JOBID, JOBNAME, COMMENT, TYPE1, TYPE2, TYPE3, JOB1, JOB2, JOB3 FROM JOBLIST";
+            String sql = "SELECT JOBID, JOBNAME, COMMENT, TYPE1, TYPE2, TYPE3, JOB1, JOB2, JOB3, JOBIMG FROM JOBLIST";
             PreparedStatement pStmt = conn.prepareStatement(sql);
 
             // SELECT文を実行して結果表（ResultSet）を取得
@@ -40,9 +40,10 @@ public class JobListDAO {
                 String job1 = rs.getString("JOB1");
                 String job2 = rs.getString("JOB2");
                 String job3 = rs.getString("JOB3");
+                String jobImg = rs.getString("JOBIMG");
 
                 // 取り出した値からインスタンスを作成
-                JobList jobList = new JobList(jobId, jobName, comment, type1, type2, type3, job1, job2, job3);
+                JobList jobList = new JobList(jobId, jobName, comment, type1, type2, type3, job1, job2, job3, jobImg);
                 jobLists.add(jobList);
             }
 
