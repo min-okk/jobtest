@@ -1,4 +1,4 @@
-# 適職診断/jobtest
+# 適職診断
 
 <div id="top"></div>
 ## 目次
@@ -24,6 +24,7 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
   <!-- バックエンドの言語一覧 -->
   <img src="https://img.shields.io/badge/-java-F2C63C.svg?logo=java&style=for-the-badge">
 </p>
+
 <!-- 言語、フレームワーク、ミドルウェア、インフラの一覧とバージョンを記載 -->
 - バックエンド
     - java
@@ -35,14 +36,14 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## デモ画面
-![TOP](shindan_top_ss.jpg)
-トップ画面 診断結果や表示に使用するニックネームを入力  
+![TOP](shindan_top_ss.jpg)<br>
+【トップ画面】診断結果や表示に使用するニックネームを入力<br>
 
-![TEST](shindan_top_q.jpg)
-はいorいいえの二択問題を表示。回答によって次の質問が変わる  
+![TEST](shindan_q_ss.jpg)<br>
+【質問画面】はいorいいえの二択問題を表示。回答によって次の質問が変わる<br>
 
-![RESULT](shindan_top_result.jpg)
-回答から適職を導きだし表示。資質や具体的な職種を提案。 
+![RESULT](shindan_result_ss.jpg)<br>
+【診断結果画面】回答から適職を導きだし表示。資質や具体的な職種を提案。 <br>
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
