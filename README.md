@@ -6,7 +6,7 @@
 1. [プロジェクトについて](#プロジェクトについて)
 2. [環境](#環境)
 3. [デモ画面](#デモ画面)
-4. [開発環境構築](#開発環境構築)
+4. [実行準備](#実行準備)
 
 <!-- プロジェクトについて -->
 
@@ -29,6 +29,7 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
 - バックエンド
     - java
     - H2 Database
+    - Apache Tomcat (Tomcat9_Java17)
 - フロントエンド
     - HTML
     - CSS
@@ -48,7 +49,10 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 
-## 開発環境構築
-
+## 実行準備
+1.Githubからリポジトリをクローン
+2.Eclipseに「jobtest」をインポート
+3.H2 Databaseで「obtest.mv.db」を読み込み
+4.Tomcat9_Java17で「WelcomeServlet」を実行
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
