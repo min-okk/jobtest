@@ -14,7 +14,10 @@
 SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授業の一環として
 ジョブリッジ企業実習を実施。
 求職者が自分の適性を活かした職業を知ることができる
-適職診断のWEBアプリを作成しました。
+適職診断のWEBアプリを作成しました。<br>
+
+<p><a href="https://docs.google.com/presentation/d/16Ou2O1aaTKH6Efy-HYqzDdcIFra2yS6Z/edit?usp=sharing&ouid=116792697741895314082&rtpof=true&sd=true">プロジェクト詳細・アプリ概要資料</a></p>
+
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
 ## 環境
@@ -50,9 +53,9 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
 
 
 ## 実行準備
-1.Githubからリポジトリをクローン
-2.Eclipseに「jobtest」をインポート
-3.H2 Databaseで「obtest.mv.db」を読み込み
-4.Tomcat9_Java17で「WelcomeServlet」を実行
+1.Githubからリポジトリをクローン<br>
+2.Eclipseに「jobtest」をインポート<br>
+3.H2 Databaseで「obtest.mv.db」を読み込み<br>
+4.Tomcat9_Java17で「WelcomeServlet」を実行<br>
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
