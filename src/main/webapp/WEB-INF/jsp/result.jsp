@@ -71,7 +71,7 @@ if (jobLists != null && !jobLists.isEmpty()) {
 <hr>
         <section class="contact">
             <!-- お問い合わせ -->
-            <h2>就労支援について</h2>
+            <h2>就労移行支援について</h2>
             <p>「もっと詳しく知りたい！」という方は</p>
             <p>お気軽にお問合せください。</p>
             <button class="button buttonA" onclick="location.href='https://www.jobridge.info/contact'">お問い合わせ</button>

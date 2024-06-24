@@ -1,7 +1,6 @@
 # 適職診断
 
 <div id="top"></div>
-## 目次
 
 1. [プロジェクトについて](#プロジェクトについて)
 2. [環境](#環境)
@@ -16,7 +15,7 @@ SBキャリアカレッジ梅田校「Javaプログラマー養成科」の授�
 求職者が自分の適性を活かした職業を知ることができる
 適職診断のWEBアプリを作成しました。<br>
 
-<p><a href="https://docs.google.com/presentation/d/16Ou2O1aaTKH6Efy-HYqzDdcIFra2yS6Z/edit?usp=sharing&ouid=116792697741895314082&rtpof=true&sd=true">プロジェクト詳細・アプリ概要資料</a></p>
+<p><a href="https://docs.google.com/presentation/d/15rMce1udQwQxlyrMgUyP_a2rBEle0wuQ/edit?usp=sharing&ouid=116792697741895314082&rtpof=true&sd=true">プロジェクト詳細・アプリ概要資料</a></p>
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
