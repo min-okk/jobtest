@@ -13,64 +13,45 @@ import javax.servlet.http.HttpSession;
 import model.RegisterUserLogic;
 import model.User;
 
-//ユーザー登録に関するリスクエストを処理するコントローラー
-
 @WebServlet("/RegisterUser")
 public class RegisterUser extends HttpServlet {
-   private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-   protected void doGet(HttpServletRequest request, HttpServletResponse response)
-           throws ServletException, IOException {
-       //フォワード先
-       String forwardPath = null;
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String forwardPath = null;
+        String action = request.getParameter("action");
 
-       //サーブレットクラスの動作を決定するactionの値をリクエストパラメータから取得する
-       String action = request.getParameter("action");
+        if (action == null) {
+            forwardPath = "/WEB-INF/jsp/index.jsp";
+        } else if (action.equals("done")) {
+            HttpSession session = request.getSession();
+            User registerUser = (User) session.getAttribute("registerUser");
+            RegisterUserLogic logic = new RegisterUserLogic();
+            logic.execute(registerUser);
+            session.removeAttribute("registerUser");
+            forwardPath = "/WEB-INF/jsp/question1.jsp";
+        }
 
-       //actionの値がnullの場合の処理
-       if (action == null) {
-           //フォワード先を設定
-           forwardPath = "/WEB-INF/jsp/index.jsp";
-       }
-       //STARTをリクエストされたときの処理
-       else if (action.equals("done")) {
-           //セッションスコープに保存された登録ユーザを取得
-           HttpSession session = request.getSession();
-           User registerUser = (User)session.getAttribute("registerUser");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(forwardPath);
+        dispatcher.forward(request, response);
+    }
 
-           //登録処理の呼び出し
-           RegisterUserLogic logic = new RegisterUserLogic();
-           logic.execute(registerUser);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");
 
-           //不要になったセッションスコープ内のインスタンスを削除
-           session.removeAttribute("registerUser");
+        // 名前が空白または null の場合、「匿名希望」を設定
+        if (name == null || name.trim().isEmpty()) {
+            name = "匿名希望";
+        }
 
-           //登録後のフォワード先を設定
-           forwardPath = "/WEB-INF/jsp/question1.jsp";
-       }
+        User registerUser = new User(name);
+        HttpSession session = request.getSession();
+        session.setAttribute("registerUser", registerUser);
 
-       //設定されたフォワード先にフォワード
-       RequestDispatcher dispatcher = request.getRequestDispatcher(forwardPath);
-       dispatcher.forward(request, response);
-   }
-
-   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-           throws ServletException, IOException {
-       //リクエストパラメータのエンコーディングを設定
-       request.setCharacterEncoding("UTF-8");
-
-       //リクエストパラメータの取得
-       String name = request.getParameter("name");
-
-       //登録するユーザーの情報を設定
-       User registerUser = new User(name);
-
-       //セッションスコープにユーザーを保存
-       HttpSession session = request.getSession();
-       session.setAttribute("registerUser", registerUser);
-
-       //フォワード
-       RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/question1.jsp");
-       dispatcher.forward(request, response);
-   }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/question1.jsp");
+        dispatcher.forward(request, response);
+    }
 }
