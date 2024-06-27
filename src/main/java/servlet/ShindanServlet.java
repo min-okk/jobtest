@@ -37,7 +37,7 @@ public class ShindanServlet extends HttpServlet {
         String action = request.getParameter("action");
         
         if (action == null || action.isEmpty()) {
-            // エラー処理: actionパラメータが不正な場合
+            // エラー処理 actionパラメータが不正だったら
             request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
             return;
         }
